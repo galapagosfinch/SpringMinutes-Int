@@ -15,7 +15,7 @@ class JsonToFloodRequestXmlTransformer extends AbstractPayloadTransformer<String
         xml.REQUEST_GROUP(MISMOVersionID: "2.4") {
             SUBMITTING_PARTY(LoginAccountIdentifier: "${json.credentials.username}",
                     LoginAccountPassword: "${json.credentials.password}")
-            REQUEST(InternalAccountIdentifier: "${json.credentials.username}",
+            REQUEST(InternalAccountIdentifier: "${json.credentials.account}",
                     RequestDatetime: "${DateTime.now()}") {
                 REQUEST_DATA() {
                     FLOOD_REQUEST(MISMOVersionID: "2.4", _ActionType: "Original") {

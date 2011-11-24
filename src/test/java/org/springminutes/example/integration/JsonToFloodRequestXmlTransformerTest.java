@@ -20,7 +20,7 @@ public class JsonToFloodRequestXmlTransformerTest {
     @Test
     public void test_transformPayload() {
         String jsonString = "{ " +
-                   "\"credentials\": { \"username\": \"bobo\", \"password\": \"logmein\" }, " +
+                   "\"credentials\": { \"username\": \"bobo\", \"password\": \"logmein\", \"account\": \"monkeyman\" }, " +
                    "\"loanInfo\": { \"caseNumber\": \"LOAN-1234\", " +
                       "\"borrower\": { \"firstName\":\"Jed\", \"lastName\": \"Clampett\" }," +
                       "\"property\": { \"address1\":\"750 Bel Air Rd\", \"city\": \"Los Angeles\", \"state\": \"CA\", \"zip\": \"90077\" }" +
@@ -31,7 +31,7 @@ public class JsonToFloodRequestXmlTransformerTest {
 
         String xmlString = "<REQUEST_GROUP MISMOVersionID='2.4'>" +
                 "  <SUBMITTING_PARTY LoginAccountIdentifier='bobo' LoginAccountPassword='logmein' />" +
-                "  <REQUEST InternalAccountIdentifier='bobo' RequestDatetime='2011-11-24T01:44:37.241-05:00'>" +
+                "  <REQUEST InternalAccountIdentifier='monkeyman' RequestDatetime='2011-11-24T01:44:37.241-05:00'>" +
                 "    <REQUEST_DATA>" +
                 "      <FLOOD_REQUEST MISMOVersionID='2.4' _ActionType='Original'>" +
                 "        <_PRODUCT _CategoryDescription='Flood'>" +
